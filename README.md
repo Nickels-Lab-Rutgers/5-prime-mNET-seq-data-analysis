@@ -1,5 +1,6 @@
 # 5-prime-mNET-seq-data-analysis
 ## Alignment
+Aligner [bowtie](http://bowtie-bio.sourceforge.net/index.shtml) is used for alignment. 
 ### Bowtie alignment command:
 ```bash
 bowtie-build -f NC_000913_3.fna bowtie_nc000913_3
