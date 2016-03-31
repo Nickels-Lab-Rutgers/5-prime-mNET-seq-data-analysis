@@ -3,9 +3,9 @@
 Aligner [bowtie](http://bowtie-bio.sourceforge.net/index.shtml) is used for alignment. 
 ### Bowtie alignment command:
 ```bash
-bowtie-build -f NC_000913_3.fna bowtie_nc000913_3
-bowtie --phred33-quals -5 6 -3 15 -n 0 -l 30 -m 1 \
-ref_genome/bowtie_nc000913_3 \
+./bowtie-1.1.2/bowtie-build -f NC_000913_3.fna bowtie_nc000913_3
+./bowtie-1.1.2/bowtie --phred33-quals -5 6 -3 15 -n 0 -l 30 -m 1 \
+bowtie_nc000913_3 \
 sampleID_5_prime_mNET_seq_data.fastq \
 sampleID_5_prime_mNET_seq_Tf6t15N0L30M1_ec3_bowtieOut.txt \
 2> sampleID_5_prime_mNET_seq_Tf6t15N0L30M1_ec3_bowtieStats.txt
@@ -31,13 +31,13 @@ Filter out reads started within the annotated tRNA regions.
 Python [intervaltree](https://pypi.python.org/pypi/intervaltree/2.0.4) package used in the script. 
 
 ```Bash
-filter_tRNA.py NC_000913_3.gff count_table.txt count_table_tRNAf_stats.txt count_table_tRNAf.txt NC_000913_3_tRNA.gff
+./filter_tRNA.py NC_000913_3.gff count_table.txt count_table_tRNAf_stats.txt count_table_tRNAf.txt NC_000913_3_tRNA.gff
 ```
 
 ## Identify TSS
 Python script command:
 ```Bash
-identify_TSS.py count_table_tRNAf.txt NC_000913_3.fna call_tss_stats.txt tss_list.txt
+./identify_TSS.py count_table_tRNAf.txt NC_000913_3.fna call_tss_stats.txt tss_list.txt
 ```
 
 Output fields are:
