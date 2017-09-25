@@ -49,8 +49,3 @@ Output fields are:
 ## Notes
 1. Type ``./somePythonScript.py`` and <kbd>RETURN</kbd> to get usage help of the script. 
 2. Genome coordinates are kept 0-based in all scripts. 
-
-## Contact
-If you have questions about the scripts, please contact y.will.zhang@gmail.com.
-
-
